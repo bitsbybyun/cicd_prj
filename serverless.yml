@@ -1,0 +1,12 @@
+service: cicd-prj
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+
+functions:
+  getMsg:
+    handler: handler.api
+    events:
+      - http: GET /
